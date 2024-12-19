@@ -27,7 +27,7 @@ def checkout(skus):
         counts_of_items['B'] = max (0, b_count - free_b)
     
     if 'U' in counts_of_items and counts_of_items['U'] > 3:
-        total += (counts_of_items['U'] // 4) * 40 # discounted rate added
+        total += (counts_of_items['U'] // 4) * 120 # discounted rate added
         counts_of_items['U'] = (counts_of_items['U'] % 4)
 
     if 'F' in counts_of_items and counts_of_items['F'] > 2:
@@ -59,3 +59,4 @@ def checkout(skus):
 
 
 print(checkout('UUUU'))
+
