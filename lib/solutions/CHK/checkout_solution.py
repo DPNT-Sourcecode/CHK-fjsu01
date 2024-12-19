@@ -19,15 +19,13 @@ def checkout(skus):
 
     total = 0
 
-  
+    print(counts_of_items)
     #handle different cases seperately
     #new special offer:
     if 'F' in counts_of_items and counts_of_items['F'] > 2:
         total += (counts_of_items['F'] // 3) * 20 # discounted rate added
-        counts_of_items['F'] == (counts_of_items['F'] % 3)
-
-
-
+        counts_of_items['F'] = (counts_of_items['F'] % 3)
+     
     #special offer
     if 'E' in counts_of_items and 'B' in counts_of_items:
         e_count = counts_of_items['E']
@@ -48,6 +46,7 @@ def checkout(skus):
 
 
 print(checkout('AABFFFF'))
+
 
 
 
