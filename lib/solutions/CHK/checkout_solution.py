@@ -58,8 +58,3 @@ def checkout(skus):
     return total
 
 
-
-
-
-
-
