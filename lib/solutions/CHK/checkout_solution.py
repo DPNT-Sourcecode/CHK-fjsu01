@@ -3,7 +3,7 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
-    prices = {'A':50, 'B': 30, 'C': 20, 'D': 15}
+    prices = {'A':50, 'B': 30, 'C': 20, 'D': 15, 'E': 40}
 
     #offers
     offers = {'A':(3,130), 'B':(2,45)}
@@ -22,5 +22,6 @@ def checkout(skus):
             total += count * prices[item]
 
     return total 
+
 
 
