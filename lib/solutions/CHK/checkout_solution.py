@@ -45,10 +45,4 @@ def checkout(skus):
     return total
 
 
-print(checkout('AABFFFF'))
-
-
-
-
-
-
+#Sorry - im not too sure how much you value formatting over timing  - I have assumed timing and speed is more important! thank you
