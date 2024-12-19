@@ -22,19 +22,23 @@ def checkout(skus):
     # print(counts_of_items)
 
     #handle special offers
-    # if
+    if 'E' in counts_of_items and 'B' in counts_of_items:
+        e_count = counts_of_items['E']
+        b_count = counts_of_items['B']
+        free_b = e_count // 2
+        counts_of_items['B'] = max (0, b_count - free_b)
     
     #NOT NEEDED IN LAST ANSWER - INEFFICIENT TO INCLUDE - ACCIDENT
     # if 'F' in counts_of_items and counts_of_items['F'] > 2:
     #     total += (counts_of_items['F'] // 3) * 20 # discounted rate added
     #     counts_of_items['F'] = (counts_of_items['F'] % 3)
      
-    #special offer
-    if 'E' in counts_of_items and 'B' in counts_of_items:
-        e_count = counts_of_items['E']
-        b_count = counts_of_items['B']
-        free_b = e_count // 2
-        counts_of_items['B'] = max (0, b_count - free_b)
+    
+    if 'N' in counts_of_items and 'M' in counts_of_items:
+        e_count = counts_of_items['N']
+        m_count = counts_of_items['M']
+        free_b = e_count // 3
+        counts_of_items['M'] = max (0, b_count - free_b)
     
     #handle the rest
     for item,count in counts_of_items.items():
