@@ -32,24 +32,13 @@ def checkout(skus):
         if item in offers:
             item_offers = sorted(offers[item], key =lambda x: -x[1]) 
             for offer_qty, offer_pricein in item_offers:
-                total += (count //offer_qty)
+                total += (count //offer_qty) * offer_price
+                count %= offer_qty
+                #then add remaining at usual price 
+        total += count * prices[item]
+    return total
 
 
-
-    for item in 'ABCD':
-        count = skus.count(item)
-        if item in offers:
-            
-
-            offer_qty, offer_price = offers[item]
-            if item == 'A':
-            
-            total += (count //offer_qty) * offer_price #apply offer here
-            total += (count % offer_qty) * prices[item] #remaining 
-        else:
-            total += count * prices[item]
-
-    return total 
 
 
 
