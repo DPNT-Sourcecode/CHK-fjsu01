@@ -20,12 +20,18 @@ def checkout(skus):
     total = 0
 
     #handle different cases seperately
-
+    #special offer
     if 'E' in counts_of_items and 'B' in counts_of_items:
         e_count = counts_of_items['E']
         b_count = counts_of_items['B']
         free_b = e_count // 2
-        
+        counts_of_items['B'] = max (0, b_count - free_b)
+    
+    #other usual offers
+    for item,count in counts_of_items.items():
+        if item in offers:
+               
+
 
     for item in 'ABCD':
         count = skus.count(item)
@@ -41,4 +47,5 @@ def checkout(skus):
             total += count * prices[item]
 
     return total 
+
 
