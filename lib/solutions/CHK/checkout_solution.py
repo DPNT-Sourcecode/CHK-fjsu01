@@ -33,12 +33,17 @@ def checkout(skus):
     #     total += (counts_of_items['F'] // 3) * 20 # discounted rate added
     #     counts_of_items['F'] = (counts_of_items['F'] % 3)
      
-    
+    if 'R' in counts_of_items and 'Q' in counts_of_items:
+        r_count = counts_of_items['R']
+        q_count = counts_of_items['Q']
+        free_q = r_count // 3
+        counts_of_items['M'] = max (0, q_count- free_q)
+
     if 'N' in counts_of_items and 'M' in counts_of_items:
-        e_count = counts_of_items['N']
+        n_count = counts_of_items['N']
         m_count = counts_of_items['M']
-        free_b = e_count // 3
-        counts_of_items['M'] = max (0, b_count - free_b)
+        free_m = n_count // 3
+        counts_of_items['M'] = max (0, m_count- free_m)
     
     #handle the rest
     for item,count in counts_of_items.items():
@@ -53,3 +58,4 @@ def checkout(skus):
 
 
 print(checkout(''))
+
