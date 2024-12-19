@@ -35,7 +35,7 @@ def checkout(skus):
         r_count = counts_of_items['R']
         q_count = counts_of_items['Q']
         free_q = r_count // 3
-        counts_of_items['M'] = max (0, q_count- free_q)
+        counts_of_items['Q'] = max (0, q_count- free_q)
 
     if 'N' in counts_of_items and 'M' in counts_of_items:
         n_count = counts_of_items['N']
@@ -53,6 +53,7 @@ def checkout(skus):
                 #then add remaining at usual price 
         total += count * prices[item]
     return total
+
 
 
 
