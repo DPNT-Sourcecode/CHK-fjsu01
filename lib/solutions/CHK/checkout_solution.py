@@ -6,7 +6,7 @@ def checkout(skus):
     prices = {'A':50, 'B': 30, 'C': 20, 'D': 15, 'E': 40, 'F': 10}
 
     #offers
-    offers = {'A':[(3,130),(5,200)], 'B':[(2,45)], 'E': [(2,'B')], 'F'}
+    offers = {'A':[(3,130),(5,200)], 'B':[(2,45)], 'E': [(2,'B')], 'F': [(3,20)]}
     
     if not isinstance(skus, str) or any(item not in prices for item in skus):
         return -1
@@ -20,6 +20,11 @@ def checkout(skus):
     total = 0
 
     #handle different cases seperately
+    #new special offer:
+    if 'F' in counts_of_items and counts_of_items['F'] >
+
+
+
     #special offer
     if 'E' in counts_of_items and 'B' in counts_of_items:
         e_count = counts_of_items['E']
@@ -39,6 +44,7 @@ def checkout(skus):
     return total
 
 
+print(checkout('AAB'))
 
 
 
