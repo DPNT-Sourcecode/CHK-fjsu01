@@ -13,7 +13,7 @@ def checkout(skus):
     
     total = 0
     for item in 'ABCD':
-        count = skus/count(item)
+        count = skus.count(item)
         if item in offers:
             offer_qty, offer_price = offers[item]
             total += (count //offer_qty) * offer_price #apply offer here
@@ -22,4 +22,5 @@ def checkout(skus):
             total += count * prices[item]
 
     return total 
+
 
