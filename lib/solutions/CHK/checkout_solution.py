@@ -19,8 +19,6 @@ def checkout(skus):
 
     total = 0
 
-    # print(counts_of_items)
-
     #handle special offers
     if 'E' in counts_of_items and 'B' in counts_of_items:
         e_count = counts_of_items['E']
@@ -57,5 +55,4 @@ def checkout(skus):
     return total
 
 
-print(checkout(''))
 
