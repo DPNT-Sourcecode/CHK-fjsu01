@@ -21,7 +21,11 @@ def checkout(skus):
 
     #handle different cases seperately
 
-
+    if 'E' in counts_of_items and 'B' in counts_of_items:
+        e_count = counts_of_items['E']
+        b_count = counts_of_items['B']
+        free_b = e_count // 2
+        
 
     for item in 'ABCD':
         count = skus.count(item)
@@ -37,9 +41,4 @@ def checkout(skus):
             total += count * prices[item]
 
     return total 
-
-
-
-
-
 
