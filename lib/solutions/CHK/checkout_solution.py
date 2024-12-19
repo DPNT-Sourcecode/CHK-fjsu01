@@ -11,10 +11,18 @@ def checkout(skus):
     if not isinstance(skus, str) or any(item not in prices for item in skus):
         return -1
     
+    #count how many items of each
+    counts_of_items = {}
+    for item in skus:
+        counts_of_items[item] = counts_of_items.get(item, 0) +1
+
+
     total = 0
 
     #handle different cases seperately
-    
+
+
+
     for item in 'ABCD':
         count = skus.count(item)
         if item in offers:
@@ -29,6 +37,7 @@ def checkout(skus):
             total += count * prices[item]
 
     return total 
+
 
 
 
