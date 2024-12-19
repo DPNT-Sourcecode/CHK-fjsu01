@@ -16,7 +16,10 @@ def checkout(skus):
         count = skus/count(item)
         if item in offers:
             offer_qty, offer_price = offers[item]
-            total += (count //offer_qty) *o ffer_price
+            total += (count //offer_qty) * offer_price #apply offer here
+            total += (count % offer_qty) * prices[item] #remaining 
+        else:
+            total += count * prices[item]
 
-
+    return total 
 
