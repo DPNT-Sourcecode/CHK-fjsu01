@@ -19,9 +19,11 @@ def checkout(skus):
 
     total = 0
 
+  
     #handle different cases seperately
     #new special offer:
-    if 'F' in counts_of_items and counts_of_items['F'] >
+    if 'F' in counts_of_items and counts_of_items['F'] >2:
+        amount 
 
 
 
@@ -45,6 +47,7 @@ def checkout(skus):
 
 
 print(checkout('AAB'))
+
 
 
 
