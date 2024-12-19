@@ -22,11 +22,12 @@ def checkout(skus):
     # print(counts_of_items)
 
     #handle special offers
-    if
-
-    if 'F' in counts_of_items and counts_of_items['F'] > 2:
-        total += (counts_of_items['F'] // 3) * 20 # discounted rate added
-        counts_of_items['F'] = (counts_of_items['F'] % 3)
+    # if
+    
+    #NOT NEEDED IN LAST ANSWER - INEFFICIENT TO INCLUDE - ACCIDENT
+    # if 'F' in counts_of_items and counts_of_items['F'] > 2:
+    #     total += (counts_of_items['F'] // 3) * 20 # discounted rate added
+    #     counts_of_items['F'] = (counts_of_items['F'] % 3)
      
     #special offer
     if 'E' in counts_of_items and 'B' in counts_of_items:
@@ -47,7 +48,4 @@ def checkout(skus):
     return total
 
 
-#Sorry - im not too sure how much you value formatting over timing  - I have assumed timing and speed is more important! thank you
-
-
-
+print(checkout(''))
