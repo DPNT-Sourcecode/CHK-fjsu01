@@ -1,12 +1,11 @@
 
-
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
-    prices = {'A':50, 'B': 30, 'C': 20, 'D': 15, 'E': 40, 'F': 10}
+    prices = {'A':50, 'B': 30, 'C': 20, 'D': 15, 'E': 40, 'F': 10, 'G':20, 'H':10}
 
     #offers
-    offers = {'A':[(3,130),(5,200)], 'B':[(2,45)], 'E': [(2,'B')], 'F': [(3,20)]}
+    offers = {'A':[(3,130),(5,200)], 'B':[(2,45)], 'E': [(2,'B')], 'F': [(3,20)], 'H': (5,45), (10,80)}
     
     if not isinstance(skus, str) or any(item not in prices for item in skus):
         return -1
